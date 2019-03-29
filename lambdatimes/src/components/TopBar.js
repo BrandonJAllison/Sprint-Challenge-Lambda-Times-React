@@ -8,6 +8,7 @@ const MainDiv = styled.div`
   align-items: none;
   flex-direction: row;
   position: fixed;
+  z-index: 2;
   height: 44px;
   background-color: #333;
   `;
