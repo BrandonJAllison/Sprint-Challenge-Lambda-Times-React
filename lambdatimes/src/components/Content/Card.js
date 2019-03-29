@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Card = props => {
+  console.log('Card', props)
   return (
     <div className="card">
       <div className="headline">{/* headline goes here */}</div>
