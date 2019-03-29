@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 
-// Refactor this component to use styled components and not classNames. 
-// You can find the corresponding CSS in the CSS/index.css file
+
 
 const Div = styled.div `
 display: flex;
@@ -15,8 +14,11 @@ display: flex;
   height: 120px;
   margin-top: 44px;
   padding-bottom: 15px;
+
+  
+ 
   @media (min-width: 1280px) {
-      width: 1280px;
+      width: 100%;
   }
 
 `;
@@ -52,7 +54,7 @@ const H1 = styled.h1`
 const Header = () => {
   return (
     <Div>
-      <FirstSpan className="date">SMARCH 32, 2018</FirstSpan>
+      <FirstSpan>SMARCH 32, 2018</FirstSpan>
       <H1>Lambda Times</H1>
       <Secondspan> 98°</Secondspan>
     </Div>
