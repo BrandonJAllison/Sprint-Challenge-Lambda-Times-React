@@ -9,9 +9,11 @@ export default class Carousel extends Component {
       positon: 0
     }
   }
-  //mounting data to state
+  
   componentDidMount(){
-    this.setState ({images: carouselData})
+    this.setState ({images: carouselData,
+      position: this.state.position < this.state.images.length - 1 ? this.state.position + 1 : 0})
+    
   }
 
   leftClick = () => {
@@ -25,9 +27,10 @@ export default class Carousel extends Component {
     })
   }
   selectedImage = () => {
-    return <img alt ="carousel" src={this.state.images[this.state.position]} style={{display: 'block'}} />
+    return <img  src={this.state.images[this.state.position]} style={{display: 'block'} } alt =""/>
   }
   render(){
+    console.log(this.state.position);
     return (
       <div className="carousel">
         <div className="left-button" onClick={this.leftClick}>{"<"}</div>
