@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 const Tab = props => {
 
   console.log('Tab', props)
-  let tabClass = props.tab === props.selectedTab ? 'tab active tab' : 'tab';
+  
   
   return (
     <div
-      className={tabClass}
+      className={props.tab === props.selectedTab ? 'tab active-tab' : 'tab'}
       onClick={props.selectTabHandler(props.tab)}
     >
       {props.tab.toUpperCase()}
